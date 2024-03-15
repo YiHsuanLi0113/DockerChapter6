@@ -1,3 +1,4 @@
+using ManyToManyCodeFirst.Data;
 using ManyToManyCodeFirst.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,6 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 //using ManyToManyCodeFirst.Models;
 //using Microsoft.EntityFrameworkCore;
 builder.Services.AddDbContext<OrderContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection2")));
+builder.Services.AddScoped<ICustomerRepo, CustomerRepo>();
+builder.Services.AddScoped<IOrderRepo, OrderRepo>();
+builder.Services.AddScoped<IProductRepo, ProductRepo>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
