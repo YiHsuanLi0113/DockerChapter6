@@ -16,28 +16,28 @@ namespace ManyToManyCodeFirst.Migrations
                 table: "Customers",
                 type: "uniqueidentifier",
                 nullable: false,
-                defaultValue: new Guid("00000000-0000-0000-0000-000000000000"));
+                defaultValue: Guid.NewGuid());;
 
             migrationBuilder.UpdateData(
                 table: "Customers",
                 keyColumn: "CustomerId",
                 keyValue: 1,
                 column: "CustomerIdGuid",
-                value: new Guid("00000000-0000-0000-0000-000000000000"));
+                value: Guid.NewGuid());;
 
             migrationBuilder.UpdateData(
                 table: "Customers",
                 keyColumn: "CustomerId",
                 keyValue: 2,
                 column: "CustomerIdGuid",
-                value: new Guid("00000000-0000-0000-0000-000000000000"));
+                value: Guid.NewGuid());;
 
             migrationBuilder.UpdateData(
                 table: "Customers",
                 keyColumn: "CustomerId",
                 keyValue: 3,
                 column: "CustomerIdGuid",
-                value: new Guid("00000000-0000-0000-0000-000000000000"));
+                value: Guid.NewGuid());;
         }
 
         /// <inheritdoc />
