@@ -1,6 +1,12 @@
+using ManyToManyCodeFirst.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+//using ManyToManyCodeFirst.Models;
+//using Microsoft.EntityFrameworkCore;
+builder.Services.AddDbContext<OrderContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection2")));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
