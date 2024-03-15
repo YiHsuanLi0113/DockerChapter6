@@ -11,6 +11,7 @@ public class Order
  
     //using System.ComponentModel.DataAnnotations;
     [Required(ErrorMessage = "{0}不可空白")]
+    [CheckOrderDate]
     public DateTime? OrderDate { get; set; }
    
     [Required(ErrorMessage = "{0}不可空白"),

@@ -28,6 +28,7 @@ public class Customer
     [Column(TypeName = "char(10)"),
     Required(ErrorMessage = "{0}不可空白"),
     RegularExpression(@"^[A-Za-z][12]\d{8}$", ErrorMessage = "身份證字號格式不正確")]
+    [CheckSecurityID]
     public string SecurityID { get; set; }
 
 
