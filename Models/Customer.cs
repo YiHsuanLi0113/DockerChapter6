@@ -10,6 +10,15 @@ public class Customer
     //ClassNameID 或ID 自動會產生Primary Key
     public int CustomerId { get; set; }
 
+    //public Guid CustomerIdGuid { get; set; }
+    //xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    private Guid customerIdGuid;
+    public Guid CustomerIdGuid
+    {
+        get => customerIdGuid;
+        set => customerIdGuid = Guid.NewGuid();
+    }
+
 
     //using System.ComponentModel.DataAnnotations.Schema;
     [Column(TypeName = "nvarchar(50)")]
