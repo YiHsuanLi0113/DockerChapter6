@@ -18,7 +18,12 @@ public class OrderProduct
 
 
     //2.多對多行為屬性
+    [Required(ErrorMessage = "{0}不可空白"),
+    Range(1, 100000, ErrorMessage = "售價需1~100000元的範圍")]
     public float UnitPrice { get; set; }
+   
+    [Required(ErrorMessage = "{0}不可空白"),
+    Range(1, 100, ErrorMessage = "訂購數量需1~100的範圍內")]
     public short Quantity { get; set; }
     public float Discount { get; set; }
 
